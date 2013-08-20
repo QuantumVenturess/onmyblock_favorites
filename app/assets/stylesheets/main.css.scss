@@ -10,7 +10,7 @@ html, body {
 body {
   background: rgb(245, 245, 245);
   color:  rgb(100, 100, 100);
-  font-family: 'Caviar Dreams', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   overflow-x: hidden;
   .wrapper {
@@ -46,12 +46,28 @@ p {
 
 /* Font face */
 @font-face {
+  font-family: 'Cantarell';
+  src: url('/assets/cantarell.ttf');
+}
+@font-face {
+  font-family: 'Cantarell Bold';
+  src: url('/assets/cantarell_bold.ttf');
+}
+@font-face {
   font-family: 'Caviar Dreams';
   src: url('/assets/caviar_dreams.ttf');
 }
 @font-face {
   font-family: 'Caviar Dreams Bold';
   src: url('/assets/caviar_dreams_bold.ttf');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('/assets/droid_sans.ttf');
+}
+@font-face {
+  font-family: 'Droid Sans Bold';
+  src: url('/assets/droid_sans_bold.ttf');
 }
 @font-face {
   font-family: 'Existence';

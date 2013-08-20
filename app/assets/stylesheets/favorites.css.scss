@@ -6,7 +6,7 @@
 }
 .favorites {
   h1 {
-    font-family: 'Caviar Dreams Bold';
+    font-family: 'Droid Sans Bold';
     font-size: 27px;
     margin: 40px 0;
   }
@@ -32,7 +32,7 @@
             background: rgb(226, 178, 43);
             @include browser(border-radius, 50px);
             color: rgb(255, 255, 255);
-            font-family: 'Caviar Dreams Bold';
+            font-family: 'Droid Sans Bold';
             font-size: 18px;
             line-height: 18px;
             margin: -10px 0 0 -10px;
