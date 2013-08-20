@@ -1,0 +1,43 @@
+<div class='favorite' id='favorite_<%= @favorites.index(favorite) + 1 %>'>
+  <%= link_to '#', class: 'cancel' do %>
+    <%= image_tag 'clear.png' %>
+  <% end %>
+  <div class='favoriteBody'>
+    <div class='image'>
+      <div class='number'><%= @favorites.index(favorite) + 1 %></div>
+      <%= image_tag favorite[:image] %>
+    </div>
+    <div class='info'>
+      <h2 class='address'><%= favorite[:address] %></h2>
+      <div class='stats'>
+        <div>
+          <h2><%= favorite[:bed] %> <span>/</span></h2>
+          <p>bd</p>
+        </div>
+        <div>
+          <h2><%= favorite[:bath] %> <span>/</span></h2>
+          <p>ba</p>
+        </div>
+        <div>
+          <h2>$<%= favorite[:price] %></h2>
+          <p>per month</p>
+        </div>
+      </div>
+    </div>
+    <div class='button'>
+      <%= link_to 'View Full Listing', '#' %>
+      <div class='stats'>
+        <div class='views' title='Views'>
+          <%= favorite[:views] %>
+        </div>
+        <div class='likes' title='Likes'>
+          <%= favorite[:likes] %>
+        </div>
+        <div class='comments' title='Comments'>
+          <%= favorite[:comments] %>
+        </div>
+      </div>
+    </div>
+    <div class='clear'></div>
+  </div>
+</div>

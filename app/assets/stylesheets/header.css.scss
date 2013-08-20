@@ -1,0 +1,54 @@
+@mixin browser($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+header {
+  background: rgb(255, 255, 255);
+  height: 72px;
+  width: 100%;
+  .header {
+    margin: 0 auto;
+    max-width: 980px;
+    width: 100%;
+    .logo {
+      display: block;
+      float: left;
+      padding: 15px 0;
+      img {
+        max-height: 42px;
+        max-width: 120px;
+      }
+    }
+    nav {
+      @include browser(box-orient, horizontal);
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      float: right;
+      a {
+        color: rgb(255, 255, 255);
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 5px 20px;
+        position: relative;
+        top: 21px;
+        &.login {
+          background: rgb(51, 153, 204);
+          margin: 0 10px 0 0;
+          &:hover {
+            background: rgb(41, 143, 194);
+          }
+        }
+        &.signUp {
+          background: rgb(50, 50, 50);
+          &:hover {
+            background: rgb(60, 60, 60);
+          }
+        }
+      }
+    }
+  }
+}

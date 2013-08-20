@@ -1,0 +1,143 @@
+@mixin browser($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+.favorites {
+  h1 {
+    font-family: 'Caviar Dreams Bold';
+    font-size: 27px;
+    margin: 40px 0;
+  }
+  .list {
+    padding: 0 0 80px 0;
+    .favorite {
+      margin: 20px 0 0 0;
+      &:first-child {
+        margin: 0;
+      }
+      width: 100%;
+      .favoriteBody {
+        background: rgb(255, 255, 255);
+        @include browser(box-sizing, border-box);
+        max-width: 920px;
+        padding: 20px;
+        .image {
+          float: left;
+          height: 150px;
+          overflow: hidden;
+          width: 200px;
+          .number {
+            background: rgb(226, 178, 43);
+            @include browser(border-radius, 50px);
+            color: rgb(255, 255, 255);
+            font-family: 'Caviar Dreams Bold';
+            font-size: 18px;
+            line-height: 18px;
+            margin: -10px 0 0 -10px;
+            padding: 7px 0 5px 0;
+            position: absolute;
+            text-align: center;
+            width: 30px;
+          }
+          img {
+            max-width: 200px;
+          }
+        }
+        .info {
+          float: left;
+          margin: 0 0 0 40px;
+          .address {
+            color: rgb(50, 50, 50);
+            font-size: 18px;
+            line-height: 20px;
+            margin: 0;
+          }
+          .stats {
+            @include browser(box-orient, horizontal);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-boxflex;
+            margin: 20px 0 0 0;
+            h2 {
+              color: rgb(111, 174, 193);
+              font-size: 54px;
+              margin: 0 20px 0 0;
+              span {
+                color: rgb(100, 100, 100);
+              }
+            }
+            p {
+              font-size: 18px;
+              margin: 10px 0 0 0;
+            }
+          }
+        }
+        .button {
+          float: right;
+          position: relative;
+          top: 40px;
+          a {
+            background: rgb(111, 174, 193);
+            background-image: url('/assets/house.png');
+            background-repeat: no-repeat;
+            background-position: 20px 10px;
+            background-size: 20px 20px;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 10px 40px 10px 60px;
+            &:hover {
+              background-color: rgb(101, 164, 183);
+            }
+          }
+          .stats {
+            @include browser(box-orient, horizontal);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-boxflex;
+            margin: 50px 0 0 0;
+            div {
+              background-repeat: no-repeat;
+              background-position: 0 0;
+              background-size: 20px 20px;
+              @include browser(box-sizing, border-box);
+              color: rgb(111, 174, 193);
+              font-size: 15px;
+              line-height: 20px;
+              padding: 0 0 0 25px;
+              &.views {
+                background-image: url('/assets/eyeball.png');
+                width: 84px;
+              }
+              &.likes {
+                background-image: url('/assets/heart.png');
+                width: 80px;
+              }
+              &.comments {
+                background-image: url('/assets/bubble.png');
+                width: 40px;
+              }
+            }
+          }
+        }
+      }
+      .cancel {
+        float: right;
+        height: 20px;
+        opacity: 0.2;
+        position: relative;
+        top: 85px;
+        width: 20px;
+        &:hover {
+          opacity: 0.7;
+        }
+        img {
+          max-width: 20px;
+        }
+      }
+    }
+  }
+}

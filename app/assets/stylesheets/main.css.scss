@@ -1,0 +1,64 @@
+@mixin browser($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+html, body {
+  height: 100%;
+}
+body {
+  background: rgb(245, 245, 245);
+  color:  rgb(100, 100, 100);
+  font-family: 'Caviar Dreams', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  .wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    .content  {
+      margin: 0 auto;
+      max-width: 980px;
+      padding: 0 0 80px 0;
+      width: 100%;
+    }
+  }
+}
+a {
+  color: rgb(135, 224, 253);
+  text-decoration: none;
+  @include browser(transition, '.1s all linear');
+  &:hover {
+    color: rgb(5, 171, 224);
+  }
+}
+p {
+  margin: 0;
+}
+.clear {
+  clear: both;
+  font-size: 1px;
+  height: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Font face */
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('/assets/caviar_dreams.ttf');
+}
+@font-face {
+  font-family: 'Caviar Dreams Bold';
+  src: url('/assets/caviar_dreams_bold.ttf');
+}
+@font-face {
+  font-family: 'Existence';
+  src: url('/assets/existence_light.eot'),
+       url('/assets/existence_light.ttf');
+}
+@font-face {
+  font-family: 'Lane';
+  src: url('/assets/lane.ttf');
+}
